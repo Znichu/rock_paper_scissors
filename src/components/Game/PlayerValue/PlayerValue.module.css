@@ -10,7 +10,7 @@
     list-style: none;
 }
 
-.playerValue ul li {
-    text-align: center;
-}
 
+span {
+    border-bottom: 1px solid #61dafb;
+}
