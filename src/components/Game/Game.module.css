@@ -1,6 +1,11 @@
-.mainGame {
-    width: 60%;
+
+.header {
+    color :#fffffe;
+    font-family: monospace;
+    margin: 15px;
+    padding: 10px;
 }
+
 
 .resultGame {
     margin: 10px;
@@ -9,8 +14,19 @@
 }
 
 .choise {
-    border-top: 1px solid #61dafb;
+    border-top: 2px solid #001e1d;
     margin: 35px;
+}
+.choise h3 {
+    font-family: monospace;
+    padding: 10px;
+    color: #fffffe;
+}
+.choise p {
+    font-size: 25px;
+    font-family: monospace;
+    padding: 3px;
+    color: #abd1c6;
 }
 
 .game {
@@ -25,9 +41,9 @@
 .buttonForGame button {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 3px;
-    background-color: #61dafb;
+    background-color: #f9bc60;
     border: none;
-    color: black;
+    color: #001e1d;
     padding: 11px 28px;
     text-align: center;
     font-size: 17px;
@@ -46,22 +62,37 @@
     letter-spacing: 1px;
     padding: 15px;
     text-align: center;
+    color: #abd1c6;
 }
-
 .resultGame p {
     font-family: monospace;
     font-size: 25px;
     letter-spacing: 1px;
     text-align: center;
+    color: #abd1c6;
 }
-.floatLeft {
-    float: left;
-}
-.floatRight {
-    float: right;
-}
-
 .winner {
     margin: 25px;
     padding-top: 50px;
+}
+.winner h1 {
+    font-family: monospace;
+    padding: 5px;
+    color: #e16162;
+}
+
+.column{
+    width : 32%;
+    background-color: #fffffe;
+    float:left;
+    margin: 0 5px;
+}
+.column:last-child{
+    float:none;
+    width:auto;
+    overflow:hidden;
+}
+.column{
+    color: #0f3433;
+    padding: 10px 0;
 }

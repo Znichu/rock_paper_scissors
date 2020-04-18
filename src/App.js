@@ -3,6 +3,7 @@ import './App.css';
 import Game from "./components/Game/Game";
 import PlayerValue from "./components/Game/PlayerValue/PlayerValue";
 import CompValue from "./components/Game/CompValue/CompValue";
+import {Col, Container, Row} from "react-bootstrap";
 
 class App extends React.Component{
 
@@ -15,7 +16,10 @@ class App extends React.Component{
             ],
             winner: "",
             playerValue: "",
-            compValue: ""
+            compValue: "",
+            playerPoints: 0,
+            compPoints: 0,
+            draw: 0,
         };
     }
 
@@ -28,13 +32,24 @@ class App extends React.Component{
         let forStatePlayer = {player: playerValue};
         let forStateComp = {comp: compValue};
         let newItem = [...this.state.game, forStatePlayer, forStateComp];
+        this.whoWinner(winner);
         this.setState(
             {
                 game: newItem,
                 winner,
                 playerValue,
-                compValue
+                compValue,
             });
+    };
+
+    whoWinner = (winner) => {
+        if ( winner === "Ты выиграл!") {
+            this.setState((prevState) => ({playerPoints: prevState.playerPoints + 1}));
+        } else if (winner === "Скайнет выиграл" ) {
+            this.setState((prevState) => ({compPoints: prevState.compPoints + 1}));
+        } else {
+            this.setState((prevState) => ({draw: prevState.draw + 1}));
+        }
     };
 
     getCompChoise = () => {
@@ -75,6 +90,31 @@ class App extends React.Component{
     render() {
         return (
             <div className="App">
+                <Container fluid>
+                    <Row>
+                        <Col xs lg="2">
+                            <PlayerValue value={this.state.game} />
+                        </Col>
+                        <Col xs lg="8">
+                            <Game
+                                handleClick={this.handleClick}
+                                winner={this.state.winner}
+                                playerValue={this.state.playerValue}
+                                compValue={this.state.compValue}
+                                playerPoints={this.state.playerPoints}
+                                compPoints={this.state.compPoints}
+                                draw={this.state.draw}
+                            />
+                        </Col>
+                        <Col xs lg="2">
+                            <CompValue  value={this.state.game}/>
+                        </Col>
+                    </Row>
+                </Container>
+
+
+
+
                 <header className="App-header">
                     <PlayerValue value={this.state.game} />
                     <Game
@@ -82,6 +122,9 @@ class App extends React.Component{
                         winner={this.state.winner}
                         playerValue={this.state.playerValue}
                         compValue={this.state.compValue}
+                        playerPoints={this.state.playerPoints}
+                        compPoints={this.state.compPoints}
+                        draw={this.state.draw}
                     />
                     <CompValue  value={this.state.game}/>
 
