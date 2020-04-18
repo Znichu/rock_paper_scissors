@@ -1,12 +1,9 @@
-
 .header {
     color :#fffffe;
     font-family: monospace;
     margin: 15px;
     padding: 10px;
 }
-
-
 .resultGame {
     margin: 10px;
     padding-bottom: 25px;
@@ -16,6 +13,7 @@
 .choise {
     border-top: 2px solid #001e1d;
     margin: 35px;
+    height: 75px;
 }
 .choise h3 {
     font-family: monospace;
@@ -52,10 +50,6 @@
     font-family: monospace;
     letter-spacing: 1px;
 }
-.buttonForGame button:hover {
-    background-color: #008CBA;
-    color: white;
-}
 .game p {
     font-family: monospace;
     font-size: 25px;
@@ -64,35 +58,32 @@
     text-align: center;
     color: #abd1c6;
 }
-.resultGame p {
-    font-family: monospace;
-    font-size: 25px;
-    letter-spacing: 1px;
-    text-align: center;
-    color: #abd1c6;
-}
 .winner {
-    margin: 25px;
-    padding-top: 50px;
+    margin: 55px;
+
 }
 .winner h1 {
     font-family: monospace;
     padding: 5px;
     color: #e16162;
 }
-
 .column{
-    width : 32%;
-    background-color: #fffffe;
-    float:left;
-    margin: 0 5px;
+    background-color: #abd1c6;
+    padding: 15px;
+    margin-top: 70px;
+    border-radius: 5px;
 }
-.column:last-child{
-    float:none;
-    width:auto;
-    overflow:hidden;
-}
-.column{
+.column span {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 20px;
     color: #0f3433;
-    padding: 10px 0;
+}
+.column h6 {
+    font-family: monospace;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding: 5px;
+    border-bottom: 1px solid #001e1d;
+    color: #001e1d;
 }

@@ -1,15 +1,27 @@
 .compValue {
     margin: 10px;
     padding: 10px;
-    width: 20%;
     text-align: center;
 }
 
-.compValue ul{
-    list-style: none;
+.compValue ul {
     padding-left: 0;
 }
+.compValue li{
+    text-align: right;
+    list-style: none;
+    color: #abd1c6;
+    font-family: monospace;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding: 1px 10px;
 
-span {
-    border-bottom: 1px solid #61dafb;
+}
+
+.compValue h5 {
+    font-size: 25px;
+    font-family: monospace;
+    color: #fffffe;
+    border-bottom: 1px solid #001e1d;
+    padding: 5px;
 }

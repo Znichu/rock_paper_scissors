@@ -4,10 +4,10 @@ import style from './CompValue.module.css'
 
 class CompValue extends React.Component {
     render() {
-        let itemList = this.props.value.map(c => <li>{c.comp}</li>);
+        let itemList = this.props.value.map((c, index) => <li key={index}>{c.comp}</li>);
         return (
             <div className={style.compValue}>
-                <span>СКАЙНЕТ</span>
+                <h5>СКАЙНЕТ</h5>
                 <ul>
                     {itemList}
                 </ul>

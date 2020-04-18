@@ -42,38 +42,36 @@ class Game extends React.Component {
                                 </div>
                             </Col>
                         </Row>
-                        <Row>
+                        <Row className="justify-content-md-center">
+                            <Col xs lg="2">
+                                <div className={style.column}>
+                                    <h6>ВЫИГРАЛ</h6>
+                                    <span>{this.props.playerPoints}</span>
+                                </div>
+                            </Col>
+                            <Col xs lg="2">
+                                <div className={style.column}>
+                                    <h6>НИЧЬЯ</h6>
+                                    <span>{this.props.draw}</span>
+                                </div>
+                            </Col>
+                            <Col xs lg="2">
+                                <div className={style.column}>
+                                    <h6>ПРОИГРАЛ</h6>
+                                    <span>{this.props.compPoints}</span>
+                                </div>
+                            </Col>
+                        </Row>
+                        <Row className="justify-content-md-center">
                             <Col>
                                 <div className={style.winner}>
                                     <h1>{this.props.winner}</h1>
                                 </div>
                             </Col>
                         </Row>
-                        <div className={style.mainGame}>
-
-
-
-                            <div className={style.resultGame}>
-                                <div >
-                                    <h3 className={style.floatLeft}>Игрок выбрал <br/> {this.props.playerValue}</h3>
-
-                                    <p className={style.floatRight}>Скайнет выбрал <br/> {this.props.compValue}</p>
-                                </div>
-
-
-                                <div className={style.points}>
-                                    <div className={style.column}><span>{this.props.playerPoints}</span></div>
-                                    <div className={style.column}><span>{this.props.compPoints}</span></div>
-                                    <div className={style.column}><span>{this.props.draw}</span></div>
-                                </div>
-
-                            </div>
-
-                        </div>
                     </Col>
                 </Row>
             </Container>
-
         );
     }
 }

@@ -14,7 +14,7 @@ class App extends React.Component{
                 {player: ''},
                 {comp: ''}
             ],
-            winner: "",
+            winner: " ",
             playerValue: "",
             compValue: "",
             playerPoints: 0,
@@ -111,24 +111,6 @@ class App extends React.Component{
                         </Col>
                     </Row>
                 </Container>
-
-
-
-
-                <header className="App-header">
-                    <PlayerValue value={this.state.game} />
-                    <Game
-                        handleClick={this.handleClick}
-                        winner={this.state.winner}
-                        playerValue={this.state.playerValue}
-                        compValue={this.state.compValue}
-                        playerPoints={this.state.playerPoints}
-                        compPoints={this.state.compPoints}
-                        draw={this.state.draw}
-                    />
-                    <CompValue  value={this.state.game}/>
-
-                </header>
             </div>
         );
     }
