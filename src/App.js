@@ -27,7 +27,7 @@ class App extends React.Component{
     handleClick = (e) => {
         e.preventDefault();
         let playerValue = e.currentTarget.id;
-        let compValue = this.getCompChoise();
+        let compValue = this.getCompChoise(1, 21);
         let winner = this.game(playerValue, compValue);
         let forStatePlayer = {player: playerValue};
         let forStateComp = {comp: compValue};
@@ -52,11 +52,12 @@ class App extends React.Component{
         }
     };
 
-    getCompChoise = () => {
-        let comMove = Math.random();
-        if (comMove <= 0.33) {
+    getCompChoise = (min, max) => {
+        // let comMove = Math.random();'
+        let comMove = Math.floor(Math.random() * (max - min + 1)) + min;
+        if (comMove <= 5) {
             return "камень";
-        } else if (comMove <= 0.61) {
+        } else if (comMove <= 10) {
             return "бумага";
         } else {
             return "ножницы";
